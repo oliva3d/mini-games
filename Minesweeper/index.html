@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Buscaminas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        #game {
+            display: grid;
+            gap: 2px;
+            margin: 20px auto;
+            width: max-content;
+        }
+        .cell {
+            width: 30px;
+            height: 30px;
+            background-color: #ccc;
+            text-align: center;
+            line-height: 30px;
+            cursor: pointer;
+            user-select: none;
+            font-size: 16px;
+        }
+        .cell.open {
+            background-color: #e0e0e0;
+            cursor: default;
+        }
+        .cell.flag {
+            background-color: #f00;
+            color: #fff;
+        }
+        .cell.mine {
+            background-color: #000;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Buscaminas</h1>
+
+<label for="difficulty">Selecciona la dificultad:</label>
+<select id="difficulty">
+    <option value="easy">Fácil</option>
+    <option value="medium">Medio</option>
+    <option value="hard">Difícil</option>
+</select>
+<button id="startBtn">Iniciar Juego</button>
+
+<div id="game"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
